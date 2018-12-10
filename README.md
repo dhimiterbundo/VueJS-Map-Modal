@@ -10,11 +10,7 @@ Create GoogleMap component and after use it as a modal with modal Component.
 
 
 At your ApiFactory.js add this:
-![alt text](https://github.com/dhimiterbundo/VueJS-Map-Modal/blob/master/Screenshot%202018-12-10%20at%2014.36.59.png)
-
-
-
-
+- ![alt text](https://github.com/dhimiterbundo/VueJS-Map-Modal/blob/master/Screenshot%202018-12-10%20at%2014.36.59.png)
 
 - At main.js
 
