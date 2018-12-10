@@ -11,22 +11,7 @@ Create GoogleMap component and after use it as a modal with modal Component.
 
 At your ApiFactory.js add this:
 
-apiFactory.interceptors.request.use(config => {
-    const token = store.getters['auth/token'];
-    if (token) {
-        config.headers.Authorization = token;
-    }
-    if (config.url.includes('https://maps.googleapis.com/maps/api')) {
-        config.headers = {};
-    }
-    config.headers['Accept-Language'] = store.getters['auth/lang'];
-    return config;
-}, (error) => {
-    if (error.response.status === 401) {
-        store.dispatch('auth/logout');
-    }
-    return Promise.reject(error.response.data);
-});
+
 
 
 At main.js
