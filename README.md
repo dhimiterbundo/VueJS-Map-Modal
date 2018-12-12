@@ -4,7 +4,7 @@ This is a Google Map Modal that use current location to get coordinates and tran
 Install GoogleMap from https://www.npmjs.com/package/vue2-google-maps .
 Create GoogleMap component and after use it as a modal with modal Component. 
 
-- At Modal component there is a googleApi request to tranfortm coordinated into location String. 
+- At Modal component there is a googleApi request to transform coordinated into location String. 
 - Google Apis requeire a key to make the request , 
 - Remove the headers from request while it makes the requst because it will not work.
 
