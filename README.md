@@ -33,8 +33,47 @@ it makes a request into
  and pass as parameter lat & long , it also require googleMapKey.
  
  * At template we use VueGoogleAutocomplete and gmap component.
+ ``` javascript
+ <template>
+    <div class="bk-map-container">
+        <div class="row" v-if="showAutocomplete">
+            <div class="col-sm-12">
+                <div>
+                    <label>{{$t('common.search_add_pin')}}</label>
+                    <vue-google-autocomplete id="map" classname="form-control"
+                                             v-on:placechanged="getAddressData">
+                    </vue-google-autocomplete>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-12">
+                <gmap-map ref="bkMap"
+                          :center="center"
+                          :zoom="16"
+                          style="width:100%;">
 
+                    <gmap-marker ref="bkMarker"
+                                 :position="marker.position"
+                                 :draggable="dragMarker"
+                                 @click="center=marker.position"
+                                 @dragend="changedPosition"
+                                 :icon.sync="marker.icon"
+                    ></gmap-marker>
+                </gmap-map>
+            </div>
+        </div>
+    </div>
+</template>
+ ```
+---
+
+* Script below.
+
+---
 ```javascript
+<script>
  import notificationService from '@/modules/common/services/NotificationService';
  import markerImage from '@/assets/marker.png';
  import VueGoogleAutocomplete from 'vue-google-autocomplete';
