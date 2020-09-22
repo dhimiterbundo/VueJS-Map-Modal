@@ -6,7 +6,7 @@ Create GoogleMap component and after use it as a modal with modal Component.
 
 - At Modal component there is a googleApi request to transform coordinated into location String. 
 - Google Apis requeire a key to make the request , 
-- Remove the headers from request while it makes the requst because it will not work.
+- Remove the headers from request while it makes the request because it will not work.
 
 
 At your ApiFactory.js add this:
